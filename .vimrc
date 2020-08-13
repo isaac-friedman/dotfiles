@@ -21,9 +21,6 @@ set gdefault
 set encoding=utf-8 nobomb
 " Change mapleader
 let mapleader=","
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -43,8 +40,6 @@ set secure
 " Enable line numbers
 set number
 " Enable syntax highlighting
-syntax on
-" Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
@@ -67,8 +62,6 @@ set noerrorbells
 set nostartofline
 " Show the cursor position
 set ruler
-" Don’t show the intro message when starting Vim
-set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
@@ -81,7 +74,7 @@ if exists("&relativenumber")
 	au BufReadPost * set relativenumber
 endif
 " Start scrolling three lines before the horizontal window border
-set scrolloff=3
+set scrolloff=5
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
